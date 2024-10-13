@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box1{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        #box2{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            overflow: scroll;
+        }
+        .box3{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>DOM(Document Object Model)</h1>
+    <p id="box1">This is BOX</p>
+    <p id="box2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium reprehenderit debitis commodi perferendis, tempora doloribus facere recusandae, ut odit labore voluptate incidunt, animi repudiandae sunt illum quos obcaecati voluptatibus exercitationem?
+        Voluptas unde laboriosam accusamus, cumque illo cupiditate necessitatibus vero sequi iusto quae, reiciendis quaerat quis placeat, natus mollitia. Id tempora illum aliquam deleniti cum, et officia asperiores aperiam dolorem ex.</p>
+        <button onclick="ChangeColor()">Click here to change color</button>
+        <button onclick="ChangeStyle()">Click here to change Style</button>
+        <p class="box3">BOX 3</p>
+        <p class="box3">BOX 4</p>
+        <button onclick="color()">Change Color</button>
+    <script>
+        function ChangeColor(){
+            document.getElementById("box1").style.backgroundColor="green";
+        }
+        function ChangeStyle(){
+            document.getElementById("box2").style.border="2px solid black";
+        }
+        function color(){
+            let clr = document.getElementsByClassName("box3");
+            for(let i=0;i<clr.length;i++){
+                clr[i].style.backgroundColor="yellow";
+            }
+        }
+    </script>
+</body>
+</html>

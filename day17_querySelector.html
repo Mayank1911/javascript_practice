@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box1{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <p id="box1">This is Box1</p>
+    <p id="box1">This is Box2</p>
+    <button onclick="changesomething()">Click Here</button>
+    <script>
+function changesomething()
+{
+    var q2 = document.querySelectorAll('#box1');
+    for(var i=0;i<q2.length;i++){
+        q2[i].style.backgroundColor = "blue";
+        q2[i].style.color = "white";
+    }
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="startTimeout()">Start Timeout</button>
+    <button onclick="startInterval()">Start Interval</button>
+    <button onclick="stopInterval()">Stop Interval</button>
+<script>
+    var IntervalId;
+
+    function startTimeout(){
+        setTimeout(function(){
+            alert("This alert is shown after 3 seconds!");
+        },3000);//3000=3
+    }
+
+    function startInterval(){
+        IntervalId = setInterval(function(){
+            console.log("This message is logged every 2 seconds.");
+        }, 2000);
+    }
+
+    function stopInterval(){
+        clearInterval(IntervalId);
+    }
+</script>
+</body>
+</html>

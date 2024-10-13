@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="opendoc()">Open the document</button>
+    <button onclick="closedoc()">Close the document</button>
+    <script>
+        function opendoc(){
+            document.open();
+            document.writeln("This is new document");
+            document.write("<h1>Hello this is browser</h1>");
+            document.write("<p>This is Paragragh</p>");
+            document.write("This is Line part 1</br>");
+            document.writeln("This is Line part 2");
+            document.close();
+        }
+        function closedoc(){
+            document.close();
+        }
+    </script>
+</body>
+</html>

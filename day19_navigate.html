@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="showNavigatorInfo()">Show Navigator Info</button>
+    <p id="info"></p>
+    <script>
+        function showNavigatorInfo() {
+            var info = "App Name: " + navigator.appName + "<br>" + 
+            "App Version: " + navigator.appVersion + "<br>" +
+            "User Agent: " + navigator.userAgent + "<br>" +
+            "Platform: " + navigator.platform;
+            document.getElementById("info").innerHTML = info;
+        }
+    </script>
+</body>
+</html>

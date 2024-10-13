@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="openbutton" onclick="opendoc()">Open the document</button>
+    <button id="closebutton" onclick="closedoc()" style = "display:none;">Close the document</button>
+    <div id="content"></div>
+    <script>
+        function opendoc() {
+            const content= document.getElementById('content');
+            content.innerHTML = `
+            <h1>Hello this is new browser</h1>
+            <p>This is Paragragh.</p>
+            <p>This is another line of text.</p>
+            <p>And here is one more line.</p>`;
+            document.getElementById('openbutton').style.display = 'none';
+            document.getElementById('closebutton').style.display = 'inline';
+        }
+        function closedoc() {
+            const content= document.getElementById('content');
+            content.innerHTML ='';//Here it just replaced all the string with empty string
+            document.getElementById('openbutton').style.display = 'block';
+            document.getElementById('closebutton').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Image Generator</title>
+<style>
+    body{
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 50px;
+    }
+    input,button{
+        font-size: 18px;
+        padding: 10px;
+        margin: 10px;
+    }
+    img{
+        margin-top: 20px;
+        width: 250px;
+        height: 250px;
+    }
+</style>
+</head>
+<body>
+    <h1>Grade Image Generator</h1>
+    <p>Enter your marks to get the grade and Image</p>
+    <input type="number" id="marksInput" placeholder="enter marks" min="0" max="100">
+    <button onclick="generateGrade()">Submit</button>
+    <div id="result"></div>
+    <script>
+function generateGrade(){
+    const marks=document.getElementById('marksInput').value;
+    const resultDiv=document.getElementById('result');
+    let grade='';
+    let imageUrl='';
+
+    if (marks>=90 && marks<=100){
+        grade='A';
+        imageUrl='/assets/media/gradeA.jpeg';
+    }
+    else if(marks>=80 && marks<90){
+        grade='B';
+        imageUrl='/assets/media/gradeB.jpg';
+    }
+    else if(marks>=70 && marks<80){
+    grade='C';
+    imageUrl='/assets/media/kid.avif';
+    }
+    else if(marks>=60 && marks<70){
+        grade='D';
+        imageUrl='/assets/media/cat-square-meme.avif';
+    }
+    else if(marks>=50 && marks<60){
+        grade='E';
+        imageUrl='/assets/media/cat-square-meme.avif';  
+    }
+    else if(marks>=35 &&  marks<50){
+        grade='Just Pass';
+        imageUrl='/assets/media/kid.avif';
+    }
+else if(marks>=0 && marks<35){
+    grade='Fail';
+    imageUrl='/assets/media/fail.jpg';
+}
+else{
+    resultDiv.innerHTML='<p> Please enter valid marks between 0 and 100.</p>';
+     return;
+}
+resultDiv.innerHTML=`<p>Your Grade: ${grade}</p>
+<img src="${imageUrl}" alt="grade image">`;
+}//Promises we use backtick `
+    </script>
+</body>
+</html>
